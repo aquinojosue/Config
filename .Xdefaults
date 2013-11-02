@@ -1,0 +1,55 @@
+! Xcursor --------------------------------------------------------------------
+
+!Cursor
+Xcursor.theme: Vainilla-DMZ-AA Xcursor.size: 22
+
+! Xft settings ---------------------------------------------------------------
+
+Xft.dpi:        96
+Xft.antialias:  true
+Xft.rgba:       rgb
+Xft.hinting:    true
+Xft.hintstyle:  hintslight
+
+! Urxvt -----------------------------------------------------------------------
+
+!Config Urxvt
+!URxvt.depth: 32
+!URxvt.background: rgba:1500/1500/1500/fff
+URxvt.font: xft: TamsynFS:pixelsize=15:antialias=false
+URxvt.geometry: 71x20
+URxvt.scrollBar: true
+Urxvt.secondaryScroll: true
+URxvt.scrollBar_right: true
+URxvt.scrollBar_floating: true
+URxvt.scrollstyle: plain
+URxvt.scrollColor: #222222
+URxvt.cursorColor: #404040
+
+URxvt*background:  #000000
+URxvt*foreground:  #aaaaaa
+! Black
+*color0:      #101010
+*color8:      #555753
+! Red
+*color1:      #ff6565
+*color9:      #ff8d8d
+! Green
+*color2:      #93d44f
+*color10:     #c8e7a8
+! Yellow
+*color3:      #eab93d
+*color11:     #ffc123
+! Blue
+*color4:      #204a87
+*color12:     #3465a4
+! Mangenta
+*color5:      #ce5c00
+*color13:     #f57900
+! Cyan 
+*color6:      #89b6e2
+*color14:     #46a4ff
+! White
+*color7:      #cccccc
+*color15:     #ffffff
+URxvt.perl-ext-common:  default,digital-clock,tabbed

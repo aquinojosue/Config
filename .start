@@ -1,0 +1,18 @@
+#!/bin/sh
+/etc/init.d/hwclock start &
+cwp --last &
+setxkbmap latam -option terminate:ctrl_alt_bksp &
+numlockx off &
+xset b off &
+volumeicon &
+#mpg123 /usr/share/audio/login.mp3 &
+sleep 1s
+#tint2 &
+sleep 2s
+(if [ ! "$(pidof notify-osd)" ]; then /usr/lib/notify-osd/notify-osd; fi)&
+#wmname LG3D &
+conky &
+conky -c /root/.ccalendar &
+sleep 7s
+rdate -s tick.greyware.com
+exit

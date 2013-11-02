@@ -1,0 +1,31 @@
+background yes
+use_xft yes
+xftfont Bankgothic Lt bt:size=8.4
+xftalpha 3.0
+
+update_interval 1.0
+total_run_times 0
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+
+minimum_size 1590 0
+
+own_window yes
+own_window_type override
+own_window_transparent no
+own_window_hints undecorate,sticky,skip_taskbar,skip_pager,below
+own_window_colour 242424
+
+no_buffers yes
+default_color C99FD0
+color1 eeeeee
+alignment bottom_left
+imlib_cache_size 1
+
+gap_x 8
+gap_y 7
+
+TEXT
+${color}Kernel ${color1}$kernel      ${color } ${time %A} ${color1} ${time  %d.%m.%Y}       ${color}Arq ${color1}$machine        ${color}IP ${color1}${execi 1 ~/.conky/ip.sh}${color}#Updates ${color1}${execi 3 #yaourt -Qu | wc -l | tail}       ${color}Home ${color1}${fs_used /home}/${fs_size /home} / Libre ${fs_free_perc /home}%       ${color}Cpu ${color1} ${cpu cpu0}%  ${color}${freq}MHz${color1} ${cpu cpu1}% ${cpu cpu2}% ${cpu cpu3}% ${cpu cpu4}%       ${color}Mem ${color1}$mem/$memmax / $memperc%       ${color}Down${color1} ${downspeed eth0}       ${color}Up ${color1}${upspeed eth0}

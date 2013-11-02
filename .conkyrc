@@ -1,0 +1,49 @@
+background no
+override_utf8_locale yes
+font Sans:size=8
+#xftfont Zero Threes:size=7
+use_xft yes
+xftalpha 0.5
+update_interval 1.0
+total_run_times 0
+own_window yes
+own_window_type override
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+double_buffer yes
+minimum_size 200
+maximum_width 220
+draw_shades yes
+draw_outline no
+draw_borders no
+draw_graph_borders no
+default_color white
+default_shade_color black
+#default_outline_color white
+alignment top_right
+gap_x 10
+gap_y 10
+no_buffers yes
+uppercase no
+cpu_avg_samples 2
+uppercase no # set to yes if you want all text to be in uppercase
+short_units
+
+TEXT
+${font OpenLogos:size=18}t	   ${font} 
+${font Zero Threes:size=12}${voffset -24}${goto 130}${time %H:%M:%S}
+${font PizzaDude Bullets:size=14}/${font} Kernel: ${alignr}${kernel}
+${font PizzaDude Bullets:size=14}0${font} Host: $alignr$nodename
+${font StyleBats:size=14}p${font} Uptime: $alignr$uptime
+${font StyleBats:size=14}l${font} Power:$alignr${acpiacadapter}${battery_time BAT1}
+${font StyleBats:size=14}l${font} ACPI: $alignr$acpitemp°
+${font StyleBats:size=14}8${font} Updates:${goto 200}${execi 60 aptitude search "~U" | wc -l | tail}
+${font StyleBats:size=14}A${font} Core1: ${cpu cpu1}% ${alignr}${cpubar   cpu1 4,90}
+${font StyleBats:size=14}A${font} Core2: ${cpu cpu2}% ${alignr}${cpubar    cpu2 4,90}
+${font StyleBats:size=14}y${font} RAM: $memperc% ${alignr}${membar    4,90}
+${font StyleBats:size=14}j${font} SWAP: $swapperc% ${alignr}${swapbar    4,90}
+${font StyleBats:size=14}4${font} /root: ${fs_used /root}${alignr}${fs_bar 4,90 /root}
+${font StyleBats:size=14}4${font} /home: ${fs_used /home}${alignr}${fs_bar 4,90 /home}
+${font StyleBats:size=14}n${font} WiFi:${wireless_link_qual wlan0}%${alignr}${wireless_link_bar 4,90 wlan0}
+${font StyleBats:size=14}t${font}${downspeedf wlan0}Kb/sec${goto 110} ${voffset -4}${font StyleBats:size=14}t${font}${upspeedf wlan0}Kb/sec
+${font PizzaDude Bullets:size=14}r${font}${totaldown wlan0}${goto 110} ${voffset -4}${font PizzaDude Bullets:size=14}v${font}${totalup wlan0}
