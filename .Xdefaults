@@ -16,8 +16,9 @@ Xft.hintstyle:  hintslight
 !Config Urxvt
 !URxvt.depth: 32
 !URxvt.background: rgba:1500/1500/1500/fff
-URxvt.font: xft: TamsynFS:pixelsize=15:antialias=false
-URxvt.geometry: 71x20
+URxvt*iconFile:            /home/jaquino/.icons/Potenza/32x32/apps/gnome-terminal.png
+URxvt.font: xft: Terminus:pixelsize=12
+URxvt.geometry: 88x25
 URxvt.scrollBar: true
 Urxvt.secondaryScroll: true
 URxvt.scrollBar_right: true
@@ -26,10 +27,10 @@ URxvt.scrollstyle: plain
 URxvt.scrollColor: #222222
 URxvt.cursorColor: #404040
 
-URxvt*background:  #000000
+URxvt*background:  #2D2D2D
 URxvt*foreground:  #aaaaaa
 ! Black
-*color0:      #101010
+*color0:      #2D2D2D
 *color8:      #555753
 ! Red
 *color1:      #ff6565
@@ -52,4 +53,4 @@ URxvt*foreground:  #aaaaaa
 ! White
 *color7:      #cccccc
 *color15:     #ffffff
-URxvt.perl-ext-common:  default,digital-clock,tabbed
+URxvt.perl-ext-common:  default,tabbed
